@@ -8,5 +8,12 @@ $(document).ready(function(){
     var num2 = 60;
     var remainder = num1 % num2;
     console.log("the remainder of " + num1 + " and " + num2 + " is " + remainder + "!")
-    console.log("I am a \"double quoted\" string inside of \"double quotes \"");
+    console.log("I am a \"double quoted\" string inside of \"double quotes\"");
+    console.log("first line\n\tsecond line\nthird line");
+    var a = "Ike";
+    var firstLetter = a[0];
+    console.log(firstLetter);
+    var b = "the stars";
+    var lastLetter = b[b.length - 1];
+    console.log(lastLetter)
 });
