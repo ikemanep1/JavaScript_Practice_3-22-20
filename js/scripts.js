@@ -31,6 +31,26 @@ function isThatStrictlyEqualToTen(prompt){
     }
         return "that is not strictly equal to ten";
 }
+function caseSwitchPractice(val) {
+    var answer = "";
+    switch(val) {
+        case 1:
+            answer = "mediocre";
+            break;
+        case 2:
+            answer = "average";
+            break;
+        case 3:
+            answer = "above average";
+            break;
+        case 4:
+            answer = "pretty darn decent";
+            break;
+        default:
+            answer = "someone to believe in"
+    }
+    return answer;
+}
 $(document).ready(function(){
     console.log("it works!");
     var myNum = 16;
@@ -70,5 +90,6 @@ $(document).ready(function(){
     console.log(isThatTrue(false));
     console.log(isThatEqualToTen("10"));
     console.log(isThatStrictlyEqualToTen("10"));
+    console.log(caseSwitchPractice(5));
 
 });
