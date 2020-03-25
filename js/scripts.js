@@ -1,3 +1,7 @@
+function wordBlanks(noun, adjective1, verb, adjective2) {
+    var result = "" + noun + " " + adjective1 + " " +  verb + " his work in a totally " + adjective2 + " manner.";
+    return result;
+}
 $(document).ready(function(){
     console.log("it works!");
     var myNum = 16;
@@ -15,5 +19,14 @@ $(document).ready(function(){
     console.log(firstLetter);
     var b = "the stars";
     var lastLetter = b[b.length - 1];
-    console.log(lastLetter)
+    console.log(lastLetter);
+    console.log(wordBlanks("Ike", "swiftly", "completed", "badass"));
+    var fruits = ["apples", 22, "bananas", ["avocadoes", "grapes"]];
+    fruits[3][0] = "tomatoes";
+    console.log(fruits[3][0]);
+    var vegetables = ["potatoes", "chilies", "onions"]
+    fruits.push(vegetables);
+    console.log(fruits[4][1] + ", expecting chilies");
+    fruits.pop(fruits[4];
+    console.log(fruits + ", expecting no vegetables");
 });
