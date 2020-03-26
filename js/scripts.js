@@ -1,3 +1,17 @@
+var Gary = {
+    Chapter: "Lion Crusaders",
+    Rank: "Primaris Captain",
+    Weapon1: "Starhammer-Pattern auto bolt-rifle",
+    Weapon2: "power sword",
+    Badass: true,
+    age: 40
+}
+function isBadass(Gary){
+    check = Gary.Badass;
+    rankCheck = Gary.Rank;
+    return check, rankCheck;
+}
+
 function wordBlanks(noun, adjective1, verb, adjective2) {
     var result = "" + noun + " " + adjective1 + " " +  verb + " his work in a totally " + adjective2 + " manner.";
     return result;
@@ -35,22 +49,35 @@ function caseSwitchPractice(val) {
     var answer = "";
     switch(val) {
         case 1:
+        case 2:
+        case 3:
             answer = "mediocre";
             break;
-        case 2:
-            answer = "average";
+        case 4:
+        case 5:
+        case 6:
+            answer = "someone to believe in";
             break;
-        case 3:
+        case 7:
+        case 8:
+        case 9:
             answer = "above average";
             break;
-        case 4:
+        case 10:
+        case 11:
+        case 12:
             answer = "pretty darn decent";
             break;
         default:
-            answer = "someone to believe in"
+            answer = "average"
+            break;
     }
     return answer;
 }
+function isLessIf(a, b) {
+    return a < b;
+}
+
 $(document).ready(function(){
     console.log("it works!");
     var myNum = 16;
@@ -91,5 +118,6 @@ $(document).ready(function(){
     console.log(isThatEqualToTen("10"));
     console.log(isThatStrictlyEqualToTen("10"));
     console.log(caseSwitchPractice(5));
-
+    console.log(isLessIf(10, 15));
+    console.log(isBadass(Gary));
 });
