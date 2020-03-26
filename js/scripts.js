@@ -4,13 +4,67 @@ var Gary = {
     Weapon1: "Starhammer-Pattern auto bolt-rifle",
     Weapon2: "power sword",
     Badass: true,
-    age: 40
+    age: 10040
+}
+var leaders = {
+    "leaderOne": {
+        "Name": "Reuben of the Runic Realm",
+        "Rank": "Chief Librarian",
+        "Weapon": "Force Stave"
+    },
+    "leaderTwo": {
+        "Name": "Leo, the chapter's fury incarnate",
+        "Rank": "Ironclad Dreadnought",
+        "Weapon": "Hurricane Bolter"
+    }
+}
+var foods = [
+    {type: "veggies",
+        list: [
+         "potatoes",
+         "onions",
+         "garlic"
+        ]
+    },
+    {type: "fruits",
+        list: [
+            "apples",
+            "bananas",
+            "strawberries"
+        ]
+    }
+]
+// function updateLeaders(leader, prop, value) {
+//     if (value === "") {
+//         delete leaders[leader][prop];
+//     } else if (prop === "Weapon") {
+//         leaders[leader][prop] = leaders[leader][prop] || [];
+//         leaders[leader][prop].push(value);
+//     } else {
+//         leaders[leader][prop] = value;
+//     }
+//     return leaders;
+// }
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 function isBadass(Gary){
     check = Gary.Badass;
-    rankCheck = Gary.Rank;
-    return check, rankCheck;
+    rank = "Rank";
+    rankCheck = Gary[rank];
+    Gary.bio = "Gary has led the Lion Crusader's 3rd company for several decades, and has slain many Chaos warriors.";
+    bioCheck = Gary.bio;
+    delete Gary.age;
+    return check, rankCheck, bioCheck;
 }
+function checkTrait(checkProp) {
+    if (Gary.hasOwnProperty(checkProp)) {
+        return Gary[checkProp];
+    } else {
+        return "not found!";
+    }
+}
+
 
 function wordBlanks(noun, adjective1, verb, adjective2) {
     var result = "" + noun + " " + adjective1 + " " +  verb + " his work in a totally " + adjective2 + " manner.";
@@ -120,4 +174,10 @@ $(document).ready(function(){
     console.log(caseSwitchPractice(5));
     console.log(isLessIf(10, 15));
     console.log(isBadass(Gary));
+    console.log(checkTrait("lame"));
+    var leaderTwoWeapon = leaders.leaderTwo.Weapon;
+    console.log(leaderTwoWeapon);
+    // var leadersManifest = JSON.parse(JSON.stringify(leaders))
+    // console.log(updateLeaders("leaderOne", "Weapon", "Power Fist"));
+    console.log(randomNumber(10, 30));
 });
